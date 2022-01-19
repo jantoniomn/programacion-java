@@ -18,7 +18,7 @@ public class Main {
 			opcion=s.nextInt();
 			
 			/*
-			 * TODO: resto del menú
+			 * TODO: resto del menú.
 			 */
 			
 			//Procesa la opción seleccionada
