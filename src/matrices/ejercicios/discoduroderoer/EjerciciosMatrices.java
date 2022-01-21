@@ -1,4 +1,4 @@
-package matrices.ejercicios;
+package matrices.ejercicios.discoduroderoer;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Ejercicios obtenidos de https://www.discoduroderoer.es/ejercicios-propuestos-y-resueltos-matrices-de-java/
  */
 public class EjerciciosMatrices {
-		
+	
 	public EjerciciosMatrices(){
 		int opcion=0;
 		do {
