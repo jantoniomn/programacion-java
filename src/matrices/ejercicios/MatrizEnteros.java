@@ -1,4 +1,4 @@
-package matrices;
+package matrices.ejercicios;
 
 import java.util.Random;
 
