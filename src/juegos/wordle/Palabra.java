@@ -25,7 +25,7 @@ public class Palabra {
 		resultado+="\n";
 		for(int i=0;i<palabra.length;i++)
 			if(palabra[i].posicionCorrecta())
-				resultado+="X";
+				resultado+="¡";
 			else if (palabra[i].existe())
 				resultado+="^";
 			else

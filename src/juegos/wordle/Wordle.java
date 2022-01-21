@@ -10,30 +10,37 @@ public class Wordle {
 		this.secreto=secreto.toUpperCase();
 		int contador=0;
 		while(contador<secreto.length()) {
-			contador++;
-			System.out.println("** Intento "+contador+" de "+secreto.length());
-			Palabra conjetura=pedirConjetura();
-			comprobarConjetura(conjetura);
-			System.out.println(conjetura);
-			if(esCorrecta(conjetura)) {
-				System.out.println("Has ganado la partida en el intento "+contador+" de "+secreto.length());
-				break;
-			}
-			if(!esCorrecta(conjetura)&&contador>=secreto.length())
-				System.out.println("Has perdido la partida.");
+			try {
+				System.out.println("** Intento "+contador+" de "+secreto.length());
+				Palabra conjetura=null;
+				conjetura=pedirConjetura();
+				comprobarConjetura(conjetura);
+				System.out.println(conjetura);
+				if(esCorrecta(conjetura)) {
+					System.out.println("Has ganado la partida en el intento "+contador+" de "+secreto.length());
+					break;
+				}
+				if(!esCorrecta(conjetura)&&contador>=secreto.length())
+					System.out.println("Has perdido la partida.");
+				contador++;
+				} 
+			catch (Exception e) {
+				System.err.println(e.getLocalizedMessage());
+			}			
 		}
 		System.out.println("La palabra secreta era "+secreto+".");
 	}
 	
-	public Palabra pedirConjetura() {
+	
+	public Palabra pedirConjetura() throws Exception {
 		String palabra;
 		Palabra p;
-		do {
-			System.out.println("Introduce una palabra de "+secreto.length()+" letras:");
-			Scanner s=new Scanner(System.in);
-			palabra=s.nextLine().toUpperCase();
-			p=new Palabra(palabra);		
-		} while(palabra.length()!=secreto.length());
+		System.out.println("Introduce una palabra de "+secreto.length()+" letras:");
+		Scanner s=new Scanner(System.in);
+		palabra=s.nextLine().toUpperCase();
+			if(palabra.length()!=secreto.length())
+				throw new Exception ("Ambas palabras deben tener la misma longitud (se obtuvo "+palabra.length()+" y se esperaba "+secreto.length()+")");
+		p=new Palabra(palabra);		
 		return p;
 	}
 	
