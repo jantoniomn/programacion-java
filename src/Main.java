@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import arrays.ejercicios.w3resources.LanzadorW3R;
 import juegos.wordle.Wordle;
 import matrices.ejercicios.Graficax2;
 import matrices.listadoAlumnado.ListadoAlumnos;
@@ -10,13 +11,14 @@ public class Main {
 	public Main() {
 		int opcion=0;
 		Scanner s=new Scanner(System.in);
-		Debug.apagar();
+		Debug.encender();
 		do {
 			//Imprime el menú
 			System.out.println("[Menú de ejecución: seleccione una opción]");
 			System.out.println("\t1) Wordle.");
 			System.out.println("\t2) Gráfica x^2");
 			System.out.println("\t3) Listado de alumnado");
+			System.out.println("\t4) Ejercicios W3R");
 			System.out.println("***");
 			System.out.println("\t0) Salir.");
 			
@@ -40,6 +42,9 @@ public class Main {
 				break;
 			case 3:
 				new ListadoAlumnos();
+				break;
+			case 4:
+				new LanzadorW3R();
 				break;
 			default:
 				System.out.println("Introduce un número válido");

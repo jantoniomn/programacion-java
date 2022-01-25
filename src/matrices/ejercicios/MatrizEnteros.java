@@ -75,6 +75,24 @@ public class MatrizEnteros {
 		return -1;
 	}
 	
+	/**
+	 * Ejemplo para probar distintas formas de invocar toString
+	 * @throws Exception
+	 */
+	public void ejemploToString() throws Exception {
+		MatrizEnteros matriz1=new MatrizEnteros(3,3);
+		MatrizEnteros matriz2=new MatrizEnteros(3,3);
+		
+		matriz1.inicializarAleatorio(10);
+		matriz2.inicializarAleatorio(10);
+		
+		String variable=matriz1.toString();
+		
+		System.out.println(variable);
+		System.out.println(matriz2.toString());
+		System.out.println(matriz2);
+	}
+	
 	public String toString() {
 		String resultado="";
 		for(int i=0;i<getNumeroFilas();i++) {
