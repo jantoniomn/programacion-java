@@ -8,7 +8,7 @@ import utilidades.Debug;
 
 public class Main {
 	
-	public Main() {
+	public Main() { 
 		int opcion=0;
 		Scanner s=new Scanner(System.in);
 		Debug.encender();
