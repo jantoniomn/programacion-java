@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 import arrays.ejercicios.w3resources.LanzadorW3R;
 import juegos.wordle.Wordle;
+import matrices.ejercicios.EjerciciosVariopintos;
 import matrices.ejercicios.Graficax2;
 import matrices.listadoAlumnado.ListadoAlumnos;
 import utilidades.Debug;
@@ -19,6 +20,7 @@ public class Main {
 			System.out.println("\t2) Gráfica x^2");
 			System.out.println("\t3) Listado de alumnado");
 			System.out.println("\t4) Ejercicios W3R");
+			System.out.println("\t5) Ejercicios variopintos");
 			System.out.println("***");
 			System.out.println("\t0) Salir.");
 			
@@ -45,6 +47,9 @@ public class Main {
 				break;
 			case 4:
 				new LanzadorW3R();
+				break;
+			case 5:
+				new EjerciciosVariopintos();
 				break;
 			default:
 				System.out.println("Introduce un número válido");

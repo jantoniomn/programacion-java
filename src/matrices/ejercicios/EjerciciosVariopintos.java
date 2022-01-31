@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Ejercicios de diversa dificultad con matrices y arrays
  * 
  * @author Guillermo González-Benito (@ehguille)
- * @tags #matrices, #arrays
+ * @tags #matrices #arrays
  */
 public class EjerciciosVariopintos {
 
@@ -44,7 +44,7 @@ public class EjerciciosVariopintos {
 				break;
 			case 5:
 				int[][] matriz= { {1,3,5}, {2,4}, {0,9,8} };
-				System.out.println(toString(ejercicio5(matriz)));
+				System.out.println(toStringLinear(ejercicio5(matriz)));
 				break;
 			case 0:
 				System.out.println("Saliendo de la aplicación...");
@@ -173,6 +173,29 @@ public class EjerciciosVariopintos {
 				resultado+=array[i][j]+" ";
 			} resultado+="\n";		
 		} 		
+		return resultado;
+	}
+	
+	/***
+	 * Devuelve la matriz pasada como parámetro
+	 * formateada al estilo { {...},...}
+	 * @param array Matriz a convertir
+	 * @return Matriz en formato String
+	 */
+	public String toStringLinear(int[][] array) {
+		String resultado="{";
+		for(int i=0;i<array.length-1;i++) {
+			resultado+="{";
+			for(int j=0;j<array[i].length-1;j++) {
+				resultado+=array[i][j]+",";
+			}	resultado+=array[i][array[i].length-1];
+			resultado+="},";		
+		}	
+		resultado+="{";
+		for(int j=0;j<array.length-1;j++) {
+			resultado+=array[array.length-1][j]+",";
+		}   resultado+=array[array.length-1][array[array.length-1].length-1];
+		resultado+="}}";
 		return resultado;
 	}
 	
