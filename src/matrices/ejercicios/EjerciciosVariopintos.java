@@ -122,9 +122,9 @@ public class EjerciciosVariopintos {
 	public int[][] ejercicio3(int numero){
 		int tabla[][]=new int[10][3];
 		for(int i=0;i<tabla.length;i++){
-				tabla[i][0]=2;
+				tabla[i][0]=numero;
 				tabla[i][1]=i+1;
-				tabla[i][2]=(i+1)*2;
+				tabla[i][2]=(i+1)*numero;
 		}
 		return tabla;		
 	}
