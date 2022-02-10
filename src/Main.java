@@ -1,5 +1,8 @@
 import java.util.Scanner;
-
+import herencia.*;
+import herencia.mamiferos.Elefante;
+import herencia.mamiferos.Gato;
+import herencia.mamiferos.Ornitorrinco;
 import arrays.ejercicios.w3resources.LanzadorW3R;
 import juegos.wordle.Wordle;
 import matrices.ejercicios.EjerciciosVariopintos;
@@ -21,6 +24,7 @@ public class Main {
 			System.out.println("\t3) Listado de alumnado");
 			System.out.println("\t4) Ejercicios W3R");
 			System.out.println("\t5) Ejercicios variopintos");
+			System.out.println("\t6) Herencia");
 			System.out.println("***");
 			System.out.println("\t0) Salir.");
 			
@@ -50,6 +54,37 @@ public class Main {
 				break;
 			case 5:
 				new EjerciciosVariopintos();
+				break;
+			case 6:
+				Gato miGato=new Gato("Pepe", 10, 20);
+				miGato.emitirRuido();
+									
+				Vertebrado unVertebrado=new Gato("Juancho",10,20);
+				
+				Mamifero mamiferoBueno=new Elefante(10,20);
+				Vertebrado otroVertebrado=mamiferoBueno;
+				
+				Vertebrado vertebradoBueno=new Elefante(10,20);
+				//Mamifero unMamifero=unVertebrado;
+				
+				
+				
+				//Este vertebrado ahora es Juancho
+				Vertebrado vertebradoAuxiliar=unVertebrado;
+				unVertebrado.emitirRuido();
+				
+				//Este vertebrado es un ornitorrinco
+				unVertebrado=new Ornitorrinco(100,200);
+				unVertebrado.emitirRuido();
+				
+				//Este vetebrado es Juancho
+				unVertebrado=vertebradoAuxiliar;
+				unVertebrado.emitirRuido();
+				
+				//Este vertebrado es otro gato nuevo
+				unVertebrado=new Gato("Josefa",10,20);
+				unVertebrado.emitirRuido();
+				
 				break;
 			default:
 				System.out.println("Introduce un número válido");
