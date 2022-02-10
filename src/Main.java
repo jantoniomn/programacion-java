@@ -67,8 +67,6 @@ public class Main {
 				Vertebrado vertebradoBueno=new Elefante(10,20);
 				//Mamifero unMamifero=unVertebrado;
 				
-				
-				
 				//Este vertebrado ahora es Juancho
 				Vertebrado vertebradoAuxiliar=unVertebrado;
 				unVertebrado.emitirRuido();
@@ -84,6 +82,8 @@ public class Main {
 				//Este vertebrado es otro gato nuevo
 				unVertebrado=new Gato("Josefa",10,20);
 				unVertebrado.emitirRuido();
+				
+				unVertebrado.convertirPiedrasEnOro();
 				
 				break;
 			default:

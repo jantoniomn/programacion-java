@@ -12,6 +12,10 @@ public abstract class Vertebrado {
 		this.altura=altura;
 	}
 	
+	public void convertirPiedrasEnOro() {
+		System.out.println("No soy capaz de convertir piedras en oro");
+	}
+	
 	abstract public void desplazarse(int metros);
 		
 	abstract public void respirar();

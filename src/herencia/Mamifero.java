@@ -9,6 +9,7 @@ public abstract class Mamifero extends Vertebrado {
 		this.esOviparo=esOviparo;
 	}
 	
+	
 	public boolean esOviparo() {
 		return esOviparo;
 	}
