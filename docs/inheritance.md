@@ -1,8 +1,4 @@
-# Contents
-
-Bellow I'll try to collect links, code and explanations about the following topics.
-
-## Inheritance
+# Inheritance
 
 I'm developing [this](https://github.com/ehguille/programacion-java/tree/main/src/herencia) to show how inheritance works in Java. I'm taking the following image as reference (although I've also included a Ornitorrico ---spanish for platypus--- class to demonstrate that there are mamals that also are oviparous.
 
