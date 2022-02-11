@@ -10,4 +10,5 @@ I'm trying my students get used to use English in theyr day-to-day, what's why I
 
 ## Contents
 
+- [Utilities](./docs/utilities.md)
 - [Inheritance](./docs/inheritance.md)
